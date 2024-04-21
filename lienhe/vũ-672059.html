@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="error.css">
+    
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Liên hệ</h1>
+        <p>Vui lòng điền đầy đủ các thông tin vào ô dưới đây và gửi liên hệ cho chúng tôi hoặc gọi vào số Hotline:
+            <h2>024.6261.7528</h2>
+        </p>
+    </div>
+    <div>
+        <form id="register" action="">
+            <label for="user">Họ tên</label><br>
+            <input type="text" name="user" id="user"><br>
+            <div id="usernameerror" >Tên không được để trống</div>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email"><br>
+            <div id="emailerror">Email không được để trống</div>
+            <label for="number">Số điện thoại</label><br>
+            <input type="number" name="number" id="number" ><br>
+            <div id="numbererror">Số điện thoại không được để trống</div>
+            <label for="area">Nội dung</label><br>
+            <textarea name="area" id="area" cols="30" rows="10"></textarea><br>
+            <div id="areaerror">Nội dung không được để trống</div>
+            <input type="submit" value="Gửi">
+            <input type="reset" value="Reset" id="reset" name="reset"><br>
+        </form>
+    </div>
+    <script>
+        const register = document.getElementById("register");
+const username = document.getElementById("user");
+const emailelement = document.getElementById("email");
+const numberelement = document.getElementById("number");
+const areaelement = document.getElementById("area");
+// lỗi
+const usernameerror = document.getElementById("usernameerror");
+const emailerror = document.getElementById("emailerror");
+const numbererror = document.getElementById("numbererror");
+const areaerror = document.getElementById("areaerror");
+
+
+
+register.addEventListener("submit",function(e){
+    e.preventDefault();
+
+    if(!username.value){
+        usernameerror.style.display ="block";
+    }else{
+        usernameerror.style.display ="none";
+    }
+    if(!emailelement.value){
+        emailerror.style.display ="block";
+    }else{
+        emailerror.style.display ="none";
+    }
+    if(!numberelement.value){
+        numbererror.style.display ="block";
+    }else{
+        numbererror.style.display ="none";
+    }
+    if(!areaelement.value){
+        areaerror.style.display ="block";
+    }else{
+        areaerror.style.display ="none";
+    }
+})
+    </script>
+</body>
+</html>
